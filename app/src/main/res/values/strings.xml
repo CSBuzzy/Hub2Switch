@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Hub2Switch</string>
     <string name="ouvrir">Ouvrir</string>
+    <!--ressources string -> layout_liste_client -->
+    <string name="client_name">Jhonny Matériel</string>
+    <string name="cpt_client">Clients 20</string>
+    <string name="cpt_materiel">Materiel 150</string>
 </resources>
