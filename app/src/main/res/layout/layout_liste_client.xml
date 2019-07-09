@@ -1,13 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-</LinearLayout>
+        android:layout_margin="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/bouton_client_access"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_android_80dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/client_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/blackWord"
+            android:text="@string/client_name" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/separatorColor"></LinearLayout>
+
+        <TextView
+            android:id="@+id/total_client"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/greenWord"
+            android:text="@string/cpt_client" />
+
+        <TextView
+            android:id="@+id/total_materiel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/greenWord"
+            android:text="@string/cpt_materiel" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/bouton_new_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="28dp"
+        app:srcCompat="@drawable/plus_ajout"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

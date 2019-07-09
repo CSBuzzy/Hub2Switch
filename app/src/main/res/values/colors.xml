@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- layout_liste_client separatorLine-->
+    <color name="separatorColor">#EEEEEE</color>
+
+    <!-- general color-->
+    <color name="blackWord">#000000</color>
+    <color name="greenWord">#009688</color>
 </resources>
