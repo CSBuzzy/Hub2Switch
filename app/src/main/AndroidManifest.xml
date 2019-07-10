@@ -9,6 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
+        <activity android:name=".liste_contact"></activity>
         <activity android:name=".ajout_client"></activity>
         <activity android:name=".fiche_client"></activity>
         <activity android:name=".liste_client"></activity>

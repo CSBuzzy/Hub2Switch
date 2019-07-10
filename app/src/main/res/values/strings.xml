@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">Hub2Switch</string>
     <string name="ouvrir">Ouvrir</string>
-    <!--ressources string -> layout_liste_client -->
+
+    <!-- layout_liste_client -->
     <string name="client_name">Jhonny Matériel</string>
     <string name="cpt_client">Clients 20</string>
     <string name="cpt_materiel">Materiel 150</string>
+
+    <!-- layout_liste_contact-->
+    <string name="contact_name">Robert Ford Informatique</string>
+    <string name="numero_rue_contact">46</string>
+    <string name="rue_contact">rue La Boétie</string>
+    <string name="code_post_contact">75016</string>
+    <string name="ville_contact">PARIS</string>
+    <string name="numero_tel_contact">06 58 75 62 54</string>
+    <string name="mail_contact">robert.ford@orange.fr</string>
 </resources>
