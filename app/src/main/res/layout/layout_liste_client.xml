@@ -55,14 +55,14 @@
     </androidx.cardview.widget.CardView>
 
     <ImageButton
-        android:id="@+id/bouton_new_client"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="28dp"
-        app:srcCompat="@drawable/plus_ajout"
-        android:background="@android:color/transparent"/>
+    android:id="@+id/bouton_new"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="28dp"
+    app:srcCompat="@drawable/plus_ajout"
+    android:background="@android:color/transparent"/>
 
 </RelativeLayout>

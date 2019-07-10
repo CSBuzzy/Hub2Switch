@@ -5,4 +5,18 @@
     <string name="client_name">Jhonny Matériel</string>
     <string name="cpt_client">Clients 20</string>
     <string name="cpt_materiel">Materiel 150</string>
+
+    <!--ressources string -> layout_fiche_client -->
+    <string name="text_adresse">Adresse</string>
+    <string name="text_Nom_Adresse">Pierre Coudert</string>
+    <string name="text_Rue_Adresse">28, boulevard Albin Durand</string>
+    <string name="text_Code_Post_Adresse">51000 CHÂLONS-EN-CHAMPAGNE</string>
+    <string name="text_Mail">Mail</string>
+    <string name="text_Adresse_Mail">pierre.coudert@gmail.com</string>
+    <string name="text_Tel">Téléphone</string>
+    <string name="text_Num_Tel">06 58 23 02 01</string>
+    <string name="button_Contact">Contact</string>
+    <string name="button_Materiel">Materiel</string>
+
+
 </resources>

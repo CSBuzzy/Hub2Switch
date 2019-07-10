@@ -27,7 +27,7 @@ public class liste_client extends AppCompatActivity {
 
         });
 
-        btnNewClient = (ImageButton) findViewById(R.id.bouton_new_client);
+        btnNewClient = (ImageButton) findViewById(R.id.bouton_new);
         btnNewClient.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
