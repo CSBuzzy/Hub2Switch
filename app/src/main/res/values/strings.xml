@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Hub2Switch</string>
+    <string name="layout_ajout_client">Ajouter un Client</string>
+    <string name="layout_ajout_contact">Ajouter un Contact</string>
+    <string name="layout_ajout_materiel">Ajouter du materiel</string>
+    <string name="layout_fiche_client">Fiche du client</string>
+    <string name="layout_liste_client">Liste des clients</string>
+    <string name="layout_liste_contact">Liste des contacts</string>
+    <string name="layout_liste_materiel">Liste du materiel</string>
     <string name="ouvrir">Ouvrir</string>
+
+
+
+
 </resources>

@@ -22,7 +22,7 @@ private Button bt_accueil;
         bt_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goTo_liste_client = new Intent(activite_accueil.this, liste_client.class);
+                Intent goTo_liste_client = new Intent(activite_accueil.this, liste_materiel.class);
                 startActivity(goTo_liste_client);
             }
 
