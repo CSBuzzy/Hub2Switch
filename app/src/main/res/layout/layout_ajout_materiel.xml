@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nom_Matereil" />
+        android:text="nom Materiel" />
 
     <EditText
         android:id="@+id/numSerie"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/numSerie" />
+        android:text="num Serie" />
 
     <EditText
         android:id="@+id/editText3"
@@ -25,5 +25,5 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/numSerie" />
+        android:text="Num serie 2" />
 </LinearLayout>

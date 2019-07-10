@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Hub2Switch</string>
+
     <string name="bienvenue">Bienvenue</string>
-    <string name="ouvrir">Ouvrir</string>
     <!--ressources string -> layout_liste_client -->
     <string name="client_name">Jhonny Matériel</string>
     <string name="cpt_client">Clients 20</string>
@@ -19,5 +19,13 @@
     <string name="button_Contact">Contact</string>
     <string name="button_Materiel">Materiel</string>
 
+    <string name="layout_ajout_client">Ajouter un Client</string>
+    <string name="layout_ajout_contact">Ajouter un Contact</string>
+    <string name="layout_ajout_materiel">Ajouter du materiel</string>
+    <string name="layout_fiche_client">Fiche du client</string>
+    <string name="layout_liste_client">Liste des clients</string>
+    <string name="layout_liste_contact">Liste des contacts</string>
+    <string name="layout_liste_materiel">Liste du materiel</string>
+    <string name="ouvrir">Ouvrir</string>
 
 </resources>
