@@ -10,4 +10,11 @@
     <!-- general color-->
     <color name="blackWord">#000000</color>
     <color name="greenWord">#009688</color>
+    <color name="colorGrey">#707070</color>
+    <color name="colorWhite">#FFF</color>
+
+    <!-- bck Color -->
+    <color name="colorGreen">#009688</color>
+    <color name="colorGreyBck">#FAFAFA</color>
 </resources>
+
