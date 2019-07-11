@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hub2switch">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission."/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +18,7 @@
         <activity android:name=".fiche_client"></activity>
         <activity android:name=".liste_client"></activity>
         <activity android:name=".activite_accueil">
+
              <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
 

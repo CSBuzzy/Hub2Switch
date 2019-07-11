@@ -21,7 +21,8 @@
         android:layout_marginTop="200dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/nom_materiel" />
+        android:text="nom Materiel" />
+        <!--android:text="@string/nom_materiel" />-->
 
     <EditText
         android:id="@+id/num_serie"
@@ -30,7 +31,8 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/num_serie" />
+        android:text="num Serie" />
+        <!--android:text="@string/num_serie" />-->
 
     <EditText
         android:id="@+id/date_achat"
@@ -39,9 +41,9 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/date_achat" />
+        android:text="Num serie 2" />
+        <!--android:text="@string/date_achat" />-->
 </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
-
 
 
