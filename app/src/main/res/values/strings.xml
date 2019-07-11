@@ -19,5 +19,9 @@
     <string name="button_Contact">Contact</string>
     <string name="button_Materiel">Materiel</string>
 
+    <!--ressources string -> layout_ajout_materiel -->
+    <string name="nom_materiel">Nom materiel</string>
+    <string name="num_serie">Numéro série</string>
+    <string name="date_achat">Date achat</string>
 
 </resources>
