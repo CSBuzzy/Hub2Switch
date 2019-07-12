@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
+        <activity android:name=".ajout_contact"></activity>
         <activity android:name=".liste_materiel"></activity>
         <activity android:name=".liste_contact"></activity>
         <activity android:name=".ajout_client"></activity>
         <activity android:name=".fiche_client"></activity>
         <activity android:name=".liste_client"></activity>
         <activity android:name=".activite_accueil">
-
-             <intent-filter>
+            <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
 
                  <category android:name="android.intent.category.LAUNCHER" />

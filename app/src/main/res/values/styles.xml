@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -17,7 +17,7 @@
         <item name="android:background">@color/separatorColor</item>
     </style>-->
 
-    <style name="layout_ajout_client" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_ajout_client" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -25,7 +25,7 @@
 
     </style>
 
-    <style name="layout_ajout_contact" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_ajout_contact" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -33,7 +33,7 @@
 
     </style>
 
-    <style name="layout_ajout_materiel" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_ajout_materiel" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -41,7 +41,7 @@
 
     </style>
 
-    <style name="layout_fiche_client" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_fiche_client" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -49,7 +49,7 @@
 
     </style>
 
-    <style name="layout_liste_client" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_liste_client" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -57,7 +57,7 @@
 
     </style>
 
-    <style name="layout_liste_contact" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_liste_contact" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -65,7 +65,7 @@
 
     </style>
 
-    <style name="layout_liste_materiel" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="layout_liste_materiel" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
