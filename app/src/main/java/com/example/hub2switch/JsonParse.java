@@ -17,50 +17,120 @@ public class JsonParse extends liste_materiel {
 
    private static final String URL = "http://formation.devatom.net/UDEV2/ProjetFilRouge/JSON/exploded/netgest_";
 
-    public void jsonParse(String nomFichierJSON, final TextView textviewjson, final RequestQueue jsonQueue){
+    public void jsonParse(final String nomFichierJSON, final RequestQueue jsonQueue, final TextView textviewjson){
         // Instantiate the RequestQueue.
         String urlFinal = URL + nomFichierJSON;
-
+        Log.i("tag","L'url final est " + urlFinal);
         // Request a string response from the provided URL.
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
 
-                        JSONArray jsonArray = response;
-                        textviewjson.setText(null);
+        if (nomFichierJSON == "materiel.json") {
 
-                        try {
-                            for (int n = 0; n < jsonArray.length(); n++) {
 
-                                JSONObject listeObject = jsonArray.getJSONObject(n);
+            JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
+                    new Response.Listener<JSONArray>() {
 
-                                String id = listeObject.getString("id");
-                                Log.i("tag",id);
-                                String nom = listeObject.getString("nom");
-                                Log.i("tag",nom);
-                                String adresse1 = listeObject.getString("adresse1");
-                                Log.i("tag",adresse1);
-                                String adresse2 = listeObject.getString("adresse2");
-                                Log.i("tag", adresse2);
-                                String idcpville = listeObject.getString("idcpville");
-                                Log.i("tag",idcpville);
 
-                                textviewjson.append(id + " " + nom + " " + adresse1 +" "+ adresse2 +" "+idcpville + "\n\n");
 
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+
+
+
+                            JSONArray jsonArray = response;
+                            textviewjson.setText(null);
+
+
+
+                            try {
+                                for (int n = 0; n < jsonArray.length(); n++) {
+
+                                    JSONObject listeObject = jsonArray.getJSONObject(n);
+
+                                    String id = listeObject.getString("id");
+                                    Log.i("tag",id);
+                                    String libelle = listeObject.getString("libelle");
+                                    Log.i("tag",libelle);
+                                    String idclient = listeObject.getString("idclient");
+                                    Log.i("tag",idclient);
+                                    String idtype = listeObject.getString("idtype");
+                                    Log.i("tag", idtype);
+
+
+                                    textviewjson.append(id + " " + libelle + " " + idclient +" "+ idtype +" "+ "\n\n");
+
+
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                            //mAdapter.notifyDataSetChanged();
                         }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        });
 
-        jsonQueue.add(request);
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                }
+            });
+
+            jsonQueue.add(request);
+
+        }else if (nomFichierJSON == "client.json"){
+
+            JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
+                    new Response.Listener<JSONArray>() {
+
+
+
+                        @Override
+                        public void onResponse(JSONArray response) {
+
+
+
+
+                            JSONArray jsonArray = response;
+                            textviewjson.setText(null);
+
+
+
+                            try {
+                                for (int n = 0; n < jsonArray.length(); n++) {
+
+                                    JSONObject listeObject = jsonArray.getJSONObject(n);
+
+                                    String id = listeObject.getString("id");
+                                    Log.i("tag",id);
+                                    String nom = listeObject.getString("nom");
+                                    Log.i("tag",nom);
+                                    String adresse1= listeObject.getString("adresse1");
+                                    Log.i("tag",adresse1);
+                                    String adresse2 = listeObject.getString("adresse2");
+                                    Log.i("tag", adresse2);
+                                    String idcpville = listeObject.getString("idcpville");
+                                    Log.i("tag", idcpville);
+
+                                    textviewjson.append(id + " " + nom + " " + adresse1+" "+ adresse2+" "+ idcpville+ ""+ "\n\n");
+
+
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            //mAdapter.notifyDataSetChanged();
+                        }
+
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                }
+            });
+
+            jsonQueue.add(request);
+
+        }
+
     }
 
 }

@@ -43,4 +43,13 @@
     <string name="numero_tel_contact">06 58 75 62 54</string>
     <string name="mail_contact">robert.ford@orange.fr</string>
 
+    <string-array name="spinnerMateriel">
+        <item>Tout</item>
+        <item>Imprimante</item>
+        <item>Switch</item>
+        <item>Routeur</item>
+        <item>Serveur</item>
+        <item>Ordinateur</item>
+    </string-array>
+
 </resources>
