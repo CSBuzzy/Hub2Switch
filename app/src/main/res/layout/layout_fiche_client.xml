@@ -132,8 +132,8 @@
         android:drawableLeft="@drawable/computer"
         android:textColor="@color/colorWhite"
         android:text="@string/button_Materiel" />
-
 </com.google.android.material.card.MaterialCardView>
+
     <ImageButton
         android:id="@+id/bouton_new"
         android:layout_width="wrap_content"
