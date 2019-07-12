@@ -2,20 +2,36 @@ package com.example.hub2switch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 
 public class liste_client extends AppCompatActivity {
 
     private ImageButton btnClientAccess;
     private ImageButton btnNewClient;
+    TextView textviewjson;
+    private RequestQueue jsonQueue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_liste_client);
+
+        textviewjson = (TextView) findViewById(R.id.textViewClientName);
+        Log.i("tag", "le message " + textviewjson);
+        jsonQueue = Volley.newRequestQueue(this);
+
+
+        // setContentView(R.layout.layout_liste_materiel);
+        JsonParse jsonparse = new JsonParse();
+        jsonparse.jsonParse("client.json",jsonQueue,textviewjson);
 
         btnClientAccess = (ImageButton) findViewById(R.id.bouton_client_access);
         btnClientAccess.setOnClickListener(new View.OnClickListener() {
