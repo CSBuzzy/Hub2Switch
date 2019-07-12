@@ -37,56 +37,65 @@
             android:background="@color/separatorColor"></LinearLayout>
 
         <TextView
-            android:id="@+id/numero_rue_contact"
+            android:id="@+id/infosClient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="110dp"
             android:layout_marginTop="50dp"
-            android:text="@string/numero_rue_contact"
-            />
-        <TextView
-            android:id="@+id/rue_contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/rue_contact"
-            />
+            android:text="46, rue de la Boetie"/>
 
-        <TextView
-            android:id="@+id/code_post_contact"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="70dp"
-            android:text="@string/code_post_contact"
-            />
+        <!-- Evolution avec recuperation des données JSON totalement parsée-->
+        <!--<TextView-->
+            <!--android:id="@+id/numero_rue_contact"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="110dp"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:text="@string/numero_rue_contact"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/rue_contact"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="130dp"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:text="@string/rue_contact"-->
+            <!--/>-->
 
-        <TextView
-            android:id="@+id/ville_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="160dp"
-            android:layout_marginTop="70dp"
-            android:text="@string/ville_contact"
-            />
-        <TextView
-            android:id="@+id/numero_tel_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="90dp"
-            android:text="@string/numero_tel_contact"
-            />
-        <TextView
-            android:id="@+id/mail_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="110dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/mail_contact"
-            />
+        <!--<TextView-->
+            <!--android:id="@+id/code_post_contact"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="110dp"-->
+            <!--android:layout_marginTop="70dp"-->
+            <!--android:text="@string/code_post_contact"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/ville_contact"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="160dp"-->
+            <!--android:layout_marginTop="70dp"-->
+            <!--android:text="@string/ville_contact"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/numero_tel_contact"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="110dp"-->
+            <!--android:layout_marginTop="90dp"-->
+            <!--android:text="@string/numero_tel_contact"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/mail_contact"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="110dp"-->
+            <!--android:layout_marginTop="110dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:text="@string/mail_contact"-->
+            <!--/>-->
         <ImageButton
             android:id="@+id/bouton_edit"
             android:layout_width="32dp"
