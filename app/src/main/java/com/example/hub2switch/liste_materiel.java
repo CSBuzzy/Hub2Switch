@@ -3,6 +3,7 @@ package com.example.hub2switch;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,13 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class liste_materiel extends Activity {
 
     private RecyclerView recyclerview;
     protected RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     ListView simpleList;
-    TextView textviewjson;
+    ListView ListViewJson;
     TextView addTextView;
     RecyclerView recyclerMateriel;
     RelativeLayout layoutParent;
@@ -34,31 +40,36 @@ public class liste_materiel extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_liste_materiel);
 
-        textviewjson = (TextView) findViewById(R.id.textViewDemo);
-        Log.i("tag", "le message " + textviewjson);
+        ListViewJson = (ListView) findViewById(R.id.ListViewMateriel);
         jsonQueue = Volley.newRequestQueue(this);
 
 
-       // setContentView(R.layout.layout_liste_materiel);
         JsonParse jsonparse = new JsonParse();
-        jsonparse.jsonParse("materiel.json",jsonQueue,textviewjson);
-
-     //  recyclerview = (RecyclerView) findViewById(R.id.my_recycler_view);
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-      // recyclerview.setHasFixedSize(true);
-
-        // use a linear layout manager
-      // layoutManager = new LinearLayoutManager(this);
-      //  recyclerview.setLayoutManager(layoutManager);
-
-        // specify an adapter (see also next example)
-      //  mAdapter = new MyAdapter(chiffre);
-      //  recyclerview.setAdapter(mAdapter);
+        jsonparse.jsonParse("materiel.json",jsonQueue,ListViewJson);
 
 
+/*
+        try
+        {
+            String jsonInput = "[\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\",\"ten\"]";
+            JSONArray jsonArray = new JSONArray(jsonInput);
+            int length = jsonArray.length();
+            List<String> listContents = new ArrayList<String>(length);
+            for (int i = 0; i < length; i++)
+            {
+                listContents.add(jsonArray.getString(i));
+            }
 
+            ListView myListView = (ListView) findViewById(R.id.ListViewMateriel);
+            myListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listContents));
+        }
+        catch (Exception e)
+        {
+            // this is just an example
+        }
+
+
+*/
 }
 
 }

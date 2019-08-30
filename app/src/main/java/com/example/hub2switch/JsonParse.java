@@ -1,6 +1,8 @@
 package com.example.hub2switch;
 
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -13,17 +15,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class JsonParse extends liste_materiel {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class JsonParse {
 
    private static final String URL = "http://formation.devatom.net/UDEV2/ProjetFilRouge/JSON/exploded/netgest_";
 
-    public void jsonParse(final String nomFichierJSON, final RequestQueue jsonQueue, final TextView textviewjson){
+    public void jsonParse(final String nomFichierJSON, final RequestQueue jsonQueue, final ListView listviewjson){
         // Instantiate the RequestQueue.
+
         String urlFinal = URL + nomFichierJSON;
         Log.i("tag","L'url final est " + urlFinal);
         // Request a string response from the provided URL.
 
-        if (nomFichierJSON == "materiel.json") {
+        if ("materiel.json".equals(nomFichierJSON)) {
 
 
             JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
@@ -34,37 +41,37 @@ public class JsonParse extends liste_materiel {
                         @Override
                         public void onResponse(JSONArray response) {
 
-
-
-
                             JSONArray jsonArray = response;
-                            textviewjson.setText(null);
 
 
+                            ArrayList<String> ArrayListMateriel = new ArrayList<>();
 
                             try {
                                 for (int n = 0; n < jsonArray.length(); n++) {
 
                                     JSONObject listeObject = jsonArray.getJSONObject(n);
-
-                                    String id = listeObject.getString("id");
-                                    Log.i("tag",id);
+                                    int id = listeObject.getInt("id");
                                     String libelle = listeObject.getString("libelle");
-                                    Log.i("tag",libelle);
-                                    String idclient = listeObject.getString("idclient");
-                                    Log.i("tag",idclient);
-                                    String idtype = listeObject.getString("idtype");
-                                    Log.i("tag", idtype);
+                                    int idclient = listeObject.getInt("idclient");
+                                    int idtype = listeObject.getInt("idtype");
+
+                                    Materiel materiel = new Materiel(id,libelle,idclient,idtype);
+
+                                    ArrayListMateriel.add(materiel.getLibelle());
 
 
-                                    textviewjson.append(id + " " + libelle + " " + idclient +" "+ idtype +" "+ "\n\n");
+                                    MyAdapter myAdapter=new MyAdapter(listviewjson.getContext(),R.layout.layout_liste_materiel,
+                                            ArrayListMateriel, R.id.textViewTest, R.id.ListViewMateriel);
 
+                                    listviewjson.setAdapter(myAdapter);
 
-                                }
+                                       }
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                            //mAdapter.notifyDataSetChanged();
+
+
                         }
 
                     }, new Response.ErrorListener() {
@@ -74,9 +81,11 @@ public class JsonParse extends liste_materiel {
                 }
             });
 
+
             jsonQueue.add(request);
 
-        }else if (nomFichierJSON == "client.json"){
+
+        }else if ("client.json".equals(nomFichierJSON)){
 
             JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
                     new Response.Listener<JSONArray>() {
@@ -86,41 +95,49 @@ public class JsonParse extends liste_materiel {
                         @Override
                         public void onResponse(JSONArray response) {
 
-
-
-
                             JSONArray jsonArray = response;
-                            textviewjson.setText(null);
 
 
+                            ArrayList<String> ArrayListClients = new ArrayList<>();
 
                             try {
                                 for (int n = 0; n < jsonArray.length(); n++) {
 
                                     JSONObject listeObject = jsonArray.getJSONObject(n);
-
-                                    String id = listeObject.getString("id");
-                                    Log.i("tag",id);
+                                    int id = listeObject.getInt("id");
                                     String nom = listeObject.getString("nom");
-                                    Log.i("tag",nom);
                                     String adresse1= listeObject.getString("adresse1");
-                                    Log.i("tag",adresse1);
                                     String adresse2 = listeObject.getString("adresse2");
-                                    Log.i("tag", adresse2);
                                     String idcpville = listeObject.getString("idcpville");
-                                    Log.i("tag", idcpville);
 
-                                    textviewjson.append(id + " " + nom + " " + adresse1+" "+ adresse2+" "+ idcpville+ ""+ "\n\n");
+
+                                    Clients clients = new Clients(id,nom,adresse1,adresse2,idcpville);
+                                    String nomClient = clients.getNomClient();
+                                    String adresse1Client = clients.getadresse1Client();
+                                    String adresse2Client = clients.getadresse2Client();
+
+
+                                    String All = "Nom du client : " + nomClient + "\n" + "Adresse du client : " + adresse1Client + "\n" + adresse2Client;
+                                    ArrayListClients.add(All);
+
+
+
+                                    MyAdapter myAdapter=new MyAdapter(listviewjson.getContext(),R.layout.layout_liste_client,
+                                            ArrayListClients, R.id.textViewTest, R.id.ListViewClient);
+
+                                    listviewjson.setAdapter(myAdapter);
 
 
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                            //mAdapter.notifyDataSetChanged();
+
                         }
 
                     }, new Response.ErrorListener() {
+
+
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
@@ -128,6 +145,8 @@ public class JsonParse extends liste_materiel {
             });
 
             jsonQueue.add(request);
+
+        }else {
 
         }
 

@@ -12,22 +12,12 @@
         />
 
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/my_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/spinnerMateriel"
-        android:layout_marginTop="82dp"
-        android:visibility="visible" />
-
-    <TextView
-        android:id="@+id/textViewDemo"
+    <ListView
+        android:id="@+id/ListViewMateriel"
         android:layout_width="match_parent"
         android:layout_height="297dp"
-        android:layout_below="@+id/my_recycler_view"
-        android:layout_marginTop="51dp"
+        android:layout_below="@+id/spinnerMateriel"
+        android:layout_marginTop="90dp"
         android:text="TextView" />
 
 </RelativeLayout>
