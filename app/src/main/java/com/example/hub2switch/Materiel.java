@@ -5,10 +5,10 @@ public class Materiel {
     int id;
     String libelle;
     int idClient;
-    int idttype;
+    String idttype;
 
 
-    public Materiel(int id, String libelle, int idClient, int idttype) {
+    public Materiel(int id, String libelle, int idClient, String idttype) {
 
         this.id = id;
         this.libelle = libelle;
@@ -34,7 +34,7 @@ public class Materiel {
     }
 
     //Retourne idType
-    public int getIdType() {
+    public String getIdType() {
         return idttype;
     }
 

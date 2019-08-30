@@ -21,16 +21,17 @@ import java.util.List;
 
 public class JsonParse {
 
-   private static final String URL = "http://formation.devatom.net/UDEV2/ProjetFilRouge/JSON/exploded/netgest_";
+   private static final String URL = "http://192.168.100.106:8080/hubtoswitch/api/";
 
     public void jsonParse(final String nomFichierJSON, final RequestQueue jsonQueue, final ListView listviewjson){
         // Instantiate the RequestQueue.
+
 
         String urlFinal = URL + nomFichierJSON;
         Log.i("tag","L'url final est " + urlFinal);
         // Request a string response from the provided URL.
 
-        if ("materiel.json".equals(nomFichierJSON)) {
+        if ("materiel".equals(nomFichierJSON)) {
 
 
             JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlFinal, null,
@@ -52,10 +53,10 @@ public class JsonParse {
                                     JSONObject listeObject = jsonArray.getJSONObject(n);
                                     int id = listeObject.getInt("id");
                                     String libelle = listeObject.getString("libelle");
-                                    int idclient = listeObject.getInt("idclient");
-                                    int idtype = listeObject.getInt("idtype");
+                                    int numserie = listeObject.getInt("numserie");
+                                    String client = listeObject.getString("client");
 
-                                    Materiel materiel = new Materiel(id,libelle,idclient,idtype);
+                                    Materiel materiel = new Materiel(id,libelle,numserie,client);
 
                                     ArrayListMateriel.add(materiel.getLibelle());
 

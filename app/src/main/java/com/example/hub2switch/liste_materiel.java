@@ -45,7 +45,7 @@ public class liste_materiel extends Activity {
 
 
         JsonParse jsonparse = new JsonParse();
-        jsonparse.jsonParse("materiel.json",jsonQueue,ListViewJson);
+        jsonparse.jsonParse("materiel",jsonQueue,ListViewJson);
 
 
 /*
