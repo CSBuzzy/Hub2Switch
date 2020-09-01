@@ -10,5 +10,5 @@ Application développée dans le cadre de l'U'Dev.
 
 * [Emeline Benquet](https://github.com/HDEmy)
 * [Pierre Anras](https://github.com/Pierreanras)
-* [Stéphanie Rebuzzi](https://github.com/CSBuzzy)
+* [Stéphanie R.](https://github.com/CSBuzzy)
 
